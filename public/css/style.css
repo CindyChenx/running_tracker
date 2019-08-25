@@ -1,3 +1,15 @@
 html {
     background-color: lightgrey;
 }
+
+.danger {
+    color: red;
+}
+
+.run {
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px
+}

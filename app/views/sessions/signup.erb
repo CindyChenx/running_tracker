@@ -1,0 +1,15 @@
+<h3>CREATE ACCOUNT</h3>
+
+<form action="/users" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <p class="danger"><%= "Name #{@errors[:name].first}" if(!!@errors && @errors[:name] && @errors[:name].first) %></p>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+    <p class="danger"><%= "Username #{@errors[:username].first}" if(!!@errors && @errors[:username] && @errors[:username].first) %></p>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <p class="danger"><%= "Password #{@errors[:password].first}" if(!!@errors && @errors[:password] && @errors[:password].first) %></p>
+    <input type="submit" value="Create">
+</form>
+<a href="/login">Login to an Existing Account</a>

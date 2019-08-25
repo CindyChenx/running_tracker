@@ -1,0 +1,6 @@
+<h3>Running History</h3>
+
+<% @runs.each do |run| %>
+    <%= erb :'runs/_run', locals: {user: run.user, run: run} %>
+<% end %>
+

@@ -1,0 +1,15 @@
+<h3>LOGIN</h3>
+
+<% if @failed %>
+    <p class="danger">Invalid username or password. Please try again.</p>
+<% end %>
+
+<form action="/login" method="post">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username"><br>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password"><br>
+    <input type="submit" value="Log In"><br>
+</form>
+
+<a href="/signup">Register a New Account</a>

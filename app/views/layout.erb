@@ -9,6 +9,16 @@
 </head>
 <body>
     <h1>Start your day with a great run!</h1>
+    <% if logged_in? %>
+        <p>
+            <a href="/home">Home</a> 
+            <a href="/runs">Friends</a> 
+            <a href="/users/<%=session[:user_id]%>">My Record</a> 
+            <a href="/runs/new">Quick Add</a> 
+            <a href="/logout">Logout</a>
+        </p>
+    <% end %>
+
     <%= yield %>
 </body>
 </html>

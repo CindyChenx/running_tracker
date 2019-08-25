@@ -1,0 +1,14 @@
+<h3>My Running Histories</h3>
+<h4><%= @user.name %></h4>
+
+<% @user.runs.each do |run| %>  
+    <p>Distance: <%= run.distance %></p>
+    <p>Durantion: <%= run.time %></p>
+    <p>Mood: <%= run.mood %></p>
+    <a href="/runs/<%=run.id%>/edit">Edit</a>
+    <form action="/runs/<%=run.id%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete">
+    </form>
+<% end %>
+

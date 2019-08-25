@@ -1,0 +1,14 @@
+<% if !!@error_message %>
+    <p class="danger"><%= @error_message %></p>
+<% end %>
+
+<form action="/runs/<%=@run.id%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="distance">Distance:</label>
+    <input type="text" name="distance" id="distance" value="<%=@run.distance%>"><br>
+    <label for="time">Durantion:</label>
+    <input type="text" name="time" id="time" value="<%=@run.time%>"><br>
+    <label for="mood">Mood:</label><br>
+    <textarea name="mood" id="mood" cols="30" rows="10"><%=@run.mood%></textarea><br>
+    <input type="submit" value="Add">
+</form>
