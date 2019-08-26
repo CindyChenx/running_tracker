@@ -2,10 +2,6 @@
 
 <h5>Please log in</h5>
 
-<% if @failed %>
-    <p class="danger">Invalid username or password. Please try again.</p>
-<% end %>
-
 <form action="/login" method="post">
     <label for="username">Username</label>
     <input id="username" type="text" name="username"><br>
@@ -15,3 +11,5 @@
 </form>
 
 <a href="/signup">Register a New Account</a>
+
+<%= login_error_messages(@errors) %>
