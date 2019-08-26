@@ -64,18 +64,6 @@ class ApplicationController < Sinatra::Base
             current_user == run.user
         end
 
-        # def authenticate_user(run)
-        #     authenticate
-        #     if !run
-        #         @message = "There is no record founded."
-        #         return erb :error
-        #     end
-        #     if current_user != run.user
-        #         @message = "You do not have access to this data."
-        #         return erb :error
-        #     end
-        # end
-
     end
 
 
