@@ -1,14 +1,36 @@
-<h3>My Running Histories</h3>
-<h4><%= @user.name %></h4>
-
-<% @user.runs.each do |run| %>  
-    <p>Distance: <%= run.distance %></p>
-    <p>Durantion: <%= run.time %></p>
-    <p>Mood: <%= run.mood %></p>
-    <a href="/runs/<%=run.id%>/edit">Edit</a>
-    <form action="/runs/<%=run.id%>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Delete">
-    </form>
-<% end %>
+<h3>My Running Histories</h3><br>
+<h4><%= @user.name %></h4><br><hr>
+    
+    <% @user.runs.each do |run| %> 
+    <div class="container">
+        <div class="row justify-content-md-center"> 
+            <div class="col-sm">
+                <p>Distance (miles)</p>
+                <h5><%= run.distance %></h5>
+            </div>
+            <div class="col-sm">
+                <p>Durantion (minutes)</p>
+                <h5><%= run.time %></h5>
+            </div>
+            <div class="col-sm">
+                <p>Average Space (minute/mile)</p>
+                <h5><%= run.time/run.distance %></h5>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-8">
+                <p>Mood: <%= run.mood %></p>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" >
+                <a href="/runs/<%=run.id%>/edit">Update</a>
+            </button>
+            <form action="/runs/<%=run.id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div><hr><br>
+    <% end %>
 

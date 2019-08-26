@@ -1,7 +1,6 @@
 html {
-    background-color: lightgrey;
+    padding: 20px;
 }
-
 .danger {
     color: red;
 }
@@ -13,3 +12,12 @@ html {
     padding: 5px;
     margin: 5px
 }
+
+.container {
+    background-color: lightgrey;
+}
+
+img {
+    width: 90%;
+    height: auto;
+  }
